@@ -12,6 +12,7 @@ app = FastAPI(title="Policy Options classifier", version="1.0")
 
 text = "I may as well admit that I have a preference for democracy over rival systems"
 example_request = json.dumps({"text": text})
+classifier = PolicyOptionsClassifier.load(model=None)
 
 
 @app.get("/", include_in_schema=False)
@@ -27,5 +28,4 @@ def predict(token: str, sentence: InputDocument = Body(..., example=example_requ
             status_code=401,
             detail="Invalid authentication credentials",
         )
-    classifier = PolicyOptionsClassifier.load(model=None)
     return classifier.predict(sentence.text)
