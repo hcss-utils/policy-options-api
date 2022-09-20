@@ -19,7 +19,7 @@ def docs_redirect():
     return RedirectResponse(url="/docs")
 
 
-@app.post("/entities", response_model=ModelResponse)
+@app.post("/api/policy-options/predict", response_model=ModelResponse)
 def predict(token: str, sentence: InputDocument = Body(..., example=example_request)):
     """Predicts if sentnece contains policy options / suggestions."""
     if token != SECRET_TOKEN:
@@ -28,4 +28,4 @@ def predict(token: str, sentence: InputDocument = Body(..., example=example_requ
             detail="Invalid authentication credentials",
         )
     classifier = PolicyOptionsClassifier.load(model=None)
-    return classifier.predict(sentence)
+    return classifier.predict(sentence.text)

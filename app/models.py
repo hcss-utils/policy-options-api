@@ -6,8 +6,7 @@ class InputDocument(BaseModel):
     text: str
 
 
-class ModelResponse(BaseModel):
-    text: str
+class ModelResponse(InputDocument):
     policy_options: float = Field(alias="policy options")
 
     class Config:

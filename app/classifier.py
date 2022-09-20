@@ -36,6 +36,6 @@ class PolicyOptionsClassifier:
     ) -> "PolicyOptionsClassifier":
         return PolicyOptionsClassifier(model=model)
 
-    def predict(self, sentence: str) -> Prediction:
-        doc = self.nlp(sentence)
-        return {"sentence": sentence, **doc.cats}
+    def predict(self, text: str) -> Prediction:
+        doc = self.nlp(text)
+        return {"text": text, **doc.cats}
