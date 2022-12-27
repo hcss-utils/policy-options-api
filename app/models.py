@@ -7,7 +7,7 @@ class InputDocument(BaseModel):
 
 
 class ModelResponse(InputDocument):
-    policy_options: float = Field(alias="policy options")
+    policy_option: float = Field(alias="policy-option")
 
     class Config:
         allow_population_by_field_name = True

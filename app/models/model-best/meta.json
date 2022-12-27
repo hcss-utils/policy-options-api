@@ -2,13 +2,13 @@
   "lang":"en",
   "name":"pipeline",
   "version":"0.0.0",
-  "spacy_version":">=3.1.6,<3.2.0",
+  "spacy_version":">=3.1.7,<3.2.0",
   "description":"",
   "author":"",
   "email":"",
   "url":"",
   "license":"",
-  "spacy_git_version":"e147a5239",
+  "spacy_git_version":"a898c7e9e",
   "vectors":{
     "width":0,
     "vectors":0,
@@ -17,7 +17,7 @@
   },
   "labels":{
     "textcat_multilabel":[
-      "policy options"
+      "policy-option"
     ]
   },
   "pipeline":[
@@ -30,23 +30,23 @@
 
   ],
   "performance":{
-    "cats_score":0.8026412326,
+    "cats_score":0.9032855731,
     "cats_score_desc":"macro AUC",
-    "cats_micro_p":0.6119402985,
-    "cats_micro_r":0.8723404255,
-    "cats_micro_f":0.7192982456,
-    "cats_macro_p":0.6119402985,
-    "cats_macro_r":0.8723404255,
-    "cats_macro_f":0.7192982456,
-    "cats_macro_auc":0.8026412326,
+    "cats_micro_p":0.793814433,
+    "cats_micro_r":0.8369565217,
+    "cats_micro_f":0.8148148148,
+    "cats_macro_p":0.793814433,
+    "cats_macro_r":0.8369565217,
+    "cats_macro_f":0.8148148148,
+    "cats_macro_auc":0.9032855731,
     "cats_f_per_type":{
-      "policy options":{
-        "p":0.6119402985,
-        "r":0.8723404255,
-        "f":0.7192982456
+      "policy-option":{
+        "p":0.793814433,
+        "r":0.8369565217,
+        "f":0.8148148148
       }
     },
     "cats_macro_auc_per_type":0.0,
-    "textcat_multilabel_loss":10.3718537721
+    "textcat_multilabel_loss":7.5026167132
   }
 }

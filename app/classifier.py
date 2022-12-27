@@ -8,6 +8,7 @@ Prediction = typing.Dict[str, typing.Union[str, float]]
 
 class PolicyOptionsClassifier:
     """Policy options text classification model.
+    
     Usage
     -----
     >>> nlp = spacy.load("path/to/model")
@@ -16,7 +17,7 @@ class PolicyOptionsClassifier:
     will review implementation of the Ukraine peace plan by end-September'''
     >>> classifier = SentenceClassifier(nlp=nlp)
     >>> classifier.predict(snippet)
-    {"sentence": ..., "policy options": 0.54}
+    {"sentence": ..., "policy-option": 0.54}
     """
 
     def __init__(
@@ -26,7 +27,7 @@ class PolicyOptionsClassifier:
             model
             if model is not None
             else spacy.load(
-                Path(__file__).resolve().parent / "models" / "policy-options"
+                Path(__file__).resolve().parent / "models"
             )
         )
 

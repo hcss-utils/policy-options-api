@@ -10,7 +10,7 @@ SECRET_TOKEN = "policy-options-2022"
 
 app = FastAPI(title="Policy Options classifier", version="1.0")
 
-text = "I may as well admit that I have a preference for democracy over rival systems"
+text = "Russia should surrender and leave Ukraine immediately, respecting borders as agreed in 1991."
 example_request = json.dumps({"text": text})
 classifier = PolicyOptionsClassifier.load(model=None)
 
