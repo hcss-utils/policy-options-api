@@ -4,6 +4,7 @@ from pathlib import Path
 import spacy
 
 Prediction = typing.Dict[str, typing.Union[str, float]]
+DEFAULT_MODEL: typing.Final = Path(__file__).resolve().parent / "models" / "model-best"
 
 
 class PolicyOptionsClassifier:
@@ -26,9 +27,7 @@ class PolicyOptionsClassifier:
         self.nlp = (
             model
             if model is not None
-            else spacy.load(
-                Path(__file__).resolve().parent / "models"
-            )
+            else spacy.load(DEFAULT_MODEL)
         )
 
     @classmethod
