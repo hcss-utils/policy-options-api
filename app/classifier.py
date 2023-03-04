@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import typing
 from pathlib import Path
 
@@ -9,7 +10,7 @@ DEFAULT_MODEL: typing.Final = Path(__file__).resolve().parent / "models" / "mode
 
 class PolicyOptionsClassifier:
     """Policy options text classification model.
-    
+
     Usage
     -----
     >>> nlp = spacy.load("path/to/model")
@@ -24,11 +25,7 @@ class PolicyOptionsClassifier:
     def __init__(
         self, model: typing.Union[spacy.language.Language, None] = None
     ) -> None:
-        self.nlp = (
-            model
-            if model is not None
-            else spacy.load(DEFAULT_MODEL)
-        )
+        self.nlp = model if model is not None else spacy.load(DEFAULT_MODEL)
 
     @classmethod
     def load(
