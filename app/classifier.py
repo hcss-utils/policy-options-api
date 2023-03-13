@@ -19,7 +19,7 @@ class PolicyOptionsClassifier:
     will review implementation of the Ukraine peace plan by end-September'''
     >>> classifier = SentenceClassifier(nlp=nlp)
     >>> classifier.predict(snippet)
-    {"sentence": ..., "policy-option": 0.54}
+    {"sentence": ..., "policy option suggestion": 0.54}
     """
 
     def __init__(
