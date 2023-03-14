@@ -39,7 +39,7 @@ def predict(s: str) -> float:
         "http://127.0.0.1:8000/api/policy-options/predict?token=policy-options-2022",
         json={"text": s}
     if response.status == 200:
-        return response.json()["policy options"]
+        return response.json()["policy option suggestion"]
     else:
         return 0.0
 
