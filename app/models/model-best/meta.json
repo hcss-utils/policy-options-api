@@ -30,23 +30,23 @@
 
   ],
   "performance":{
-    "cats_score":0.8326970551,
+    "cats_score":0.9102313883,
     "cats_score_desc":"macro AUC",
-    "cats_micro_p":0.753968254,
-    "cats_micro_r":0.6484641638,
-    "cats_micro_f":0.6972477064,
-    "cats_macro_p":0.753968254,
-    "cats_macro_r":0.6484641638,
-    "cats_macro_f":0.6972477064,
-    "cats_macro_auc":0.8326970551,
+    "cats_micro_p":0.8770226537,
+    "cats_micro_r":0.7633802817,
+    "cats_micro_f":0.8162650602,
+    "cats_macro_p":0.8770226537,
+    "cats_macro_r":0.7633802817,
+    "cats_macro_f":0.8162650602,
+    "cats_macro_auc":0.9102313883,
     "cats_f_per_type":{
       "policy option suggestion":{
-        "p":0.753968254,
-        "r":0.6484641638,
-        "f":0.6972477064
+        "p":0.8770226537,
+        "r":0.7633802817,
+        "f":0.8162650602
       }
     },
     "cats_macro_auc_per_type":0.0,
-    "textcat_multilabel_loss":0.0069788751
+    "textcat_multilabel_loss":0.0007732829
   }
 }
